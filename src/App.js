@@ -56,7 +56,7 @@ class App extends Component {
 
           <aside>
             <div className="values">
-              <p style={{ color: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>H:{this.state.hueValue} S:{this.state.saturationValue}% L:{this.state.lightnessValue}%</p>
+              <p className="hslValue" style={{ color: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>H:{this.state.hueValue} S:{this.state.saturationValue}% L:{this.state.lightnessValue}%</p>
             </div>
 
             <div className="color-window" style={{ backgroundColor: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>
