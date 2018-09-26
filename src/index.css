@@ -46,10 +46,14 @@ input {
   width: 300px;
 }
 
+.values {
+  padding-top: 50px;
+  color: #404E4D;
+}
+
 .color-window {
-  border: 10px solid #C2B1CC;
+  border: 10px solid #404E4D;
   height: 125px;
   width: 100px;
   margin: auto 0;
-  background-color: #FCF1A1;
-}
+  }

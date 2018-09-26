@@ -8,9 +8,9 @@ class App extends Component {
     super(props)
 
     this.state = {
-      hueValue: 180,
-      saturationValue: 50,
-      lightnessValue: 50
+      hueValue: 182,
+      saturationValue: 99,
+      lightnessValue: 48
     }
   }
 
@@ -19,7 +19,7 @@ class App extends Component {
 
     this.setState((state, props) => {
       return {
-        hueValue: hueValue
+        hueValue
       }
     })
   }
@@ -29,9 +29,10 @@ class App extends Component {
 
     this.setState((state, props) => {
       return {
-        saturationValue: saturationValue
+        saturationValue
       }
     })
+    console.log(saturationValue)
   }
 
   _moveLight = event => {
@@ -39,7 +40,7 @@ class App extends Component {
 
     this.setState((state, props) => {
       return {
-        lightnessValue: lightnessValue
+        lightnessValue
       }
     })
   }
@@ -53,13 +54,16 @@ class App extends Component {
 
         <main className="all-content">
 
+          <aside>
+            <div className="values">
+              <p>{this.state.hueValue}, {this.state.saturationValue}%, {this.state.lightnessValue}%</p>
+            </div>
 
-          <div className="color-window">
-
-          </div>
+            <div className="color-window" style={{ backgroundColor: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>
+            </div>
+          </aside>
 
           <div>
-
             <ul>
               <li>
                 <p>Hue</p>
@@ -73,17 +77,21 @@ class App extends Component {
                 <p>Lightness</p>
                 <input onChange={this._moveLight} type="range" min="0" max="100" value={this.state.lightnessValue} />
               </li>
-
             </ul>
           </div>
 
         </main>
-      </div>
+      </div >
     );
   }
 }
 
 export default App;
+
+
+
+
+
 
 
 
