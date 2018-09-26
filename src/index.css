@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Chicle');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Chicle', cursive;
+  background-color: #FCF1A1;
+  letter-spacing: 3px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  width: 600px;
+  border: 1px solid #404E4D;
+  margin: 20px auto 0 auto;
+  background-color: #F7A278;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: #404E4D;
+  font-size: 4rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  list-style-type: none;
+  line-height: 30px;
+  color: #404E4D;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+p {
+  padding-left: 10px;
+}
+
+input {
+  width: 300px;
+}
+
+.color-window {
+  border: 10px solid #C2B1CC;
+  height: 125px;
+  width: 100px;
+  margin: auto 0;
+  background-color: #FCF1A1;
+}
