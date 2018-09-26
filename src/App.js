@@ -8,10 +8,40 @@ class App extends Component {
     super(props)
 
     this.state = {
-      hueValue: 50,
-      saturationValue: 70,
-      lightnessValue: 90
+      hueValue: 180,
+      saturationValue: 50,
+      lightnessValue: 50
     }
+  }
+
+  _moveHue = event => {
+    let hueValue = event.target.value
+
+    this.setState((state, props) => {
+      return {
+        hueValue: hueValue
+      }
+    })
+  }
+
+  _moveSat = event => {
+    let saturationValue = event.target.value
+
+    this.setState((state, props) => {
+      return {
+        saturationValue: saturationValue
+      }
+    })
+  }
+
+  _moveLight = event => {
+    let lightnessValue = event.target.value
+
+    this.setState((state, props) => {
+      return {
+        lightnessValue: lightnessValue
+      }
+    })
   }
 
   render() {
@@ -33,15 +63,15 @@ class App extends Component {
             <ul>
               <li>
                 <p>Hue</p>
-                <input type="range" min="0" max="360" value={this.state.hueValue} />
+                <input onChange={this._moveHue} type="range" min="0" max="360" value={this.state.hueValue} />
               </li>
               <li>
                 <p>Saturation</p>
-                <input type="range" min="0" max="100" value={this.state.saturationValue} />
+                <input onChange={this._moveSat} type="range" min="0" max="100" value={this.state.saturationValue} />
               </li>
               <li>
                 <p>Lightness</p>
-                <input type="range" min="0" max="100" value={this.state.lightnessValue} />
+                <input onChange={this._moveLight} type="range" min="0" max="100" value={this.state.lightnessValue} />
               </li>
 
             </ul>
