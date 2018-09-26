@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Slider from './Slider'
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      hueValue: 50,
+      saturationValue: 70,
+      lightnessValue: 90
+    }
+  }
+
   render() {
     return (
       <div>
@@ -19,25 +29,20 @@ class App extends Component {
           </div>
 
           <div>
+
             <ul>
-              <Slider
-                name="Hue"
-                min="0"
-                max="360"
-                value="100"
-              />
-              <Slider
-                name="Saturation"
-                min="0"
-                max="100"
-                value="50"
-              />
-              <Slider
-                name="Lightness"
-                min="0"
-                max="100"
-                value="90"
-              />
+              <li>
+                <p>Hue</p>
+                <input type="range" min="0" max="360" value={this.state.hueValue} />
+              </li>
+              <li>
+                <p>Saturation</p>
+                <input type="range" min="0" max="100" value={this.state.saturationValue} />
+              </li>
+              <li>
+                <p>Lightness</p>
+                <input type="range" min="0" max="100" value={this.state.lightnessValue} />
+              </li>
 
             </ul>
           </div>
@@ -49,5 +54,6 @@ class App extends Component {
 }
 
 export default App;
+
 
 
