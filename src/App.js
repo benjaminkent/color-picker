@@ -8,8 +8,8 @@ class App extends Component {
     super(props)
 
     this.state = {
-      hueValue: 182,
-      saturationValue: 99,
+      hueValue: 214,
+      saturationValue: 94,
       lightnessValue: 48
     }
   }
@@ -56,7 +56,7 @@ class App extends Component {
 
           <aside>
             <div className="values">
-              <p>{this.state.hueValue}, {this.state.saturationValue}%, {this.state.lightnessValue}%</p>
+              <p style={{ color: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>H:{this.state.hueValue} S:{this.state.saturationValue}% L:{this.state.lightnessValue}%</p>
             </div>
 
             <div className="color-window" style={{ backgroundColor: `hsl(${this.state.hueValue}, ${this.state.saturationValue}%, ${this.state.lightnessValue}%)` }}>
