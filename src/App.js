@@ -20,18 +20,25 @@ class App extends Component {
 
           <div>
             <ul>
-              <li>
-                <p>Hue</p>
-                <input type="range" min="0" max="360" />
-              </li>
-              <li>
-                <p>Saturation</p>
-                <input type="range" min="0" max="100" />
-              </li>
-              <li>
-                <p>Lightness</p>
-                <input type="range" min="0" max="100" />
-              </li>
+              <Slider
+                name="Hue"
+                min="0"
+                max="360"
+                value="100"
+              />
+              <Slider
+                name="Saturation"
+                min="0"
+                max="100"
+                value="50"
+              />
+              <Slider
+                name="Lightness"
+                min="0"
+                max="100"
+                value="90"
+              />
+
             </ul>
           </div>
 
