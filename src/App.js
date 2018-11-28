@@ -1,47 +1,23 @@
 import React, { Component } from 'react'
-// import logo from './logo.svg';
 import './App.css'
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      hueValue: 150,
-      saturationValue: 68,
-      lightnessValue: 48
-    }
+  state = {
+    hueValue: 150,
+    saturationValue: 68,
+    lightnessValue: 48
   }
 
   _moveHue = event => {
-    let hueValue = event.target.value
-
-    this.setState((state, props) => {
-      return {
-        hueValue
-      }
-    })
+    this.setState({ hueValue: event.target.value })
   }
 
   _moveSat = event => {
-    let saturationValue = event.target.value
-
-    this.setState((state, props) => {
-      return {
-        saturationValue
-      }
-    })
-    console.log(saturationValue)
+    this.setState({ saturationValue: event.target.value })
   }
 
   _moveLight = event => {
-    let lightnessValue = event.target.value
-
-    this.setState((state, props) => {
-      return {
-        lightnessValue
-      }
-    })
+    this.setState({ lightnessValue: event.target.value })
   }
 
   render() {
